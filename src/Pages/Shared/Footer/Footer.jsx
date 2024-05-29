@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import logo from "../../assets/heritageLogo.png";
+import logo from "../../../assets/heritageLogo.png";
 
 const Footer = () => {
   return (
