@@ -1,26 +1,46 @@
-import React from 'react';
-import frame1 from '../../assets/frame1.jpeg';
-import frame2 from '../../assets/frame2.jpeg';
-import playButton from '../../assets/playbutton.png'
+import React from "react";
+import frame1 from "../../assets/frame1.jpeg";
+import frame2 from "../../assets/frame2.jpeg";
+import playButton from "../../assets/playbutton.png";
+import { RiFindReplaceLine } from "react-icons/ri";
 
 const Property = () => {
-    return (
-        <div className='mx-20 grid grid-cols-1 md:grid-cols-2 mb-10'>
-            <div>
-                    <img className='w-[485px] h-[400px] rounded' src={frame1} alt="frame1 img" />
-                    <img className='w-[452px] h-[240px] rounded ml-28 -mt-32' src={frame2} alt="frame2 img" />
-                    {/* <img className='ml-96 -mt-80 ' src={playButton} alt="" /> */}
-                    <div className='relative '>
-                        <div className='absolute left-96 w-24 -mt-72 ml-16'>
-                            <img src={playButton} alt="" />
-                        </div>
-                    </div>
-            </div>
-            <div>
-                    
-            </div>
+  return (
+    <div className="mx-5 md:mx-20 grid grid-cols-1 xl:grid-cols-2 mb-10">
+      <div>
+        <img
+          className="w-[485px] h-[400px] rounded"
+          src={frame1}
+          alt="frame1 img"
+        />
+        <img
+          className="w-[452px] h-[240px] rounded md:ml-28 -mt-32"
+          src={frame2}
+          alt="frame2 img"
+        />
+        <div className="relative ">
+          <div className="absolute left-4 md:left-96 w-24 -mt-72 ml-16">
+            <img src={playButton} alt="" />
+          </div>
         </div>
-    );
+      </div>
+      <div className="p-10">
+        <div className="flex items-center gap-3">
+          <div>
+            <div className="border-2 w-14 border-orange-400"></div>
+          </div>
+          <div className="text-[#F06711] font-semibold text-lg">
+            <p>Property buying</p>
+          </div>
+        </div>
+        <div>
+          <h2 className="font-bold text-4xl">Efficient and Transparent Home Buying Solutions</h2>
+          <p className="mt-6 mb-12">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+          <button className="bg-[#ECF5FF] p-3 text-blue-600 font-medium rounded-sm inline-flex items-center gap-2"><RiFindReplaceLine /> Find Property</button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Property;
