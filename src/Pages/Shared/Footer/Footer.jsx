@@ -60,7 +60,7 @@ const Footer = () => {
         </nav>
       </footer>
 
-      <footer className="footer p-10 border-t bg-[#ECF5FF] border-base-300 text-lg text-slate-600">
+      <footer className="footer p-10 border-t bg-[#ECF5FF] border-base-300 text-base text-slate-600">
         <aside className="items-center grid-flow-col">
           <p>&copy; 2024 Heritage- Nest . All rights reserved.</p>
         </aside>
