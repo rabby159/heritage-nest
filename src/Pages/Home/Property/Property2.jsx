@@ -1,7 +1,7 @@
 import React from "react";
-import frame3 from "../../assets/frame3.jpeg";
-import frame4 from "../../assets/frame4.jpeg";
-import playButton from "../../assets/playbutton.png";
+import frame3 from "../../../assets/frame3.jpeg";
+import frame4 from "../../../assets/frame4.jpeg";
+import playButton from "../../../assets/playbutton.png";
 import { RiFindReplaceLine } from "react-icons/ri";
 
 const Property2 = () => {

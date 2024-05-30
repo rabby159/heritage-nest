@@ -1,12 +1,29 @@
 import React from "react";
-import frame5 from "../../assets/frame5.jpeg";
-import frame6 from "../../assets/frame6.jpeg";
-import playButton from "../../assets/playbutton.png";
+import frame1 from "../../../assets/frame1.jpeg";
+import frame2 from "../../../assets/frame2.jpeg";
+import playButton from "../../../assets/playbutton.png";
 import { RiFindReplaceLine } from "react-icons/ri";
 
-const Property3 = () => {
+const Property = () => {
   return (
     <div className="mx-5 md:mx-20 grid grid-cols-1 xl:grid-cols-2 mb-20">
+      <div>
+        <img
+          className="w-[485px] h-[400px] rounded"
+          src={frame1}
+          alt="frame1 img"
+        />
+        <img
+          className="w-[452px] h-[240px] rounded md:ml-28 -mt-32"
+          src={frame2}
+          alt="frame2 img"
+        />
+        <div className="relative ">
+          <div className="absolute left-4 md:left-96 w-24 -mt-72 ml-16">
+            <img src={playButton} alt="" />
+          </div>
+        </div>
+      </div>
       <div className="p-10">
         <div className="flex items-center gap-3">
           <div>
@@ -22,31 +39,8 @@ const Property3 = () => {
           <button className="bg-[#ECF5FF] p-3 text-blue-600 font-medium rounded-sm inline-flex items-center gap-2"><RiFindReplaceLine /> Find Property</button>
         </div>
       </div>
-      <div>
-        <div className="absolute">
-        <img
-          className="w-[280px] md:w-[452px] h-[240px] rounded md:ml-28"
-          src={frame6}
-          alt="frame6 img"
-        />
-        </div>
-        <div className="mt-32">
-        <img
-          className="w-[485px] h-[400px] rounded"
-          src={frame5}
-          alt="frame2 img"
-        />
-        </div>
-        <div className="relative ">
-          <div className="absolute w-24 -mt-80 md:-mt-[430px] ml-16">
-            <img src={playButton} alt="" />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Property3;
-
-// left-4 md:left-96  -mt-72 ml-16
+export default Property;

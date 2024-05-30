@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import logo from "../../../assets/heritageLogo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navLink1 = (
     <>
       <li>
-        <a>Buy</a>
+        <Link to='/buyer'>Buy</Link>
       </li>
       <li>
         <a>Sell</a>
@@ -63,7 +64,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center w-12 h-20">
-        <img src={logo} alt="heritage-Logo" />
+        <Link to='/'><img src={logo} alt="heritage-Logo" /></Link>
       </div>
       <div className=" menu menu-horizontal navbar-end hidden lg:flex">
         {navLink2}

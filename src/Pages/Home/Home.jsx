@@ -1,9 +1,9 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
-import Property from '../Property/Property';
-import Property2 from '../Property/Property2';
-import Property3 from '../Property/Property3';
-import Services from '../Services/Services';
+import Banner from './Banner/Banner';
+import Property from './Property/Property';
+import Property2 from './Property/Property2';
+import Property3 from './Property/Property3';
+import Services from '../Shared/Services/Services';
 
 const Home = () => {
     return (
