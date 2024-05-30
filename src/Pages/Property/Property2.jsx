@@ -6,7 +6,7 @@ import { RiFindReplaceLine } from "react-icons/ri";
 
 const Property2 = () => {
   return (
-    <div className="mx-5 md:mx-20 grid grid-cols-1 xl:grid-cols-2 mb-10">
+    <div className="mx-5 md:mx-20 grid grid-cols-1 xl:grid-cols-2 mb-20">
       <div>
         <img
           className="w-[485px] h-[400px] rounded"
