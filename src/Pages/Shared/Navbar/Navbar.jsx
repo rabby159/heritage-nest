@@ -24,7 +24,7 @@ const Navbar = () => {
         <a>Manage Rentals</a>
       </li>
       <li>
-        <a>Sign In</a>
+        <Link to='/signIn'>Sign In</Link>
       </li>
     </>
   );

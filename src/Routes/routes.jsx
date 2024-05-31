@@ -7,6 +7,7 @@ import Buyer from "../Pages/Buyer/Buyer";
 import SearchResult from "../Pages/BuyerSearchResult/SearchResult";
 import Seller from "../Pages/Seller/Seller";
 import PropertyDetails from "../Pages/BuyerSearchResult/PropertyDetails/PropertyDetails";
+import SignIn from "../Pages/SignIn/SignIn";
 
   export const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ import PropertyDetails from "../Pages/BuyerSearchResult/PropertyDetails/Property
         {
           path: 'seller',
           element : <Seller></Seller>
+        },
+        {
+          path: 'signIn',
+          element : <SignIn></SignIn>
         }
       ]
     },
