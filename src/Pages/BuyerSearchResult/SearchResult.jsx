@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Testimonials from "../Shared/Testimonials/Testimonials";
 import HomeLoan from "./HomeLoan/HomeLoan";
 
@@ -19,7 +19,11 @@ const SearchResult = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {searchResults.map((property, index) => (
           <div key={index} className="p-4">
-            <div className="card card-side bg-base-100 shadow-xl">
+            <Link
+              to={`/property/${property.id}`}
+              state={{ property }}
+              className="card card-side bg-base-100 shadow-xl"
+            >
               <figure>
                 <img className="w-40 h-80" src={property.img_url} alt="Movie" />
               </figure>
@@ -55,22 +59,20 @@ const SearchResult = () => {
                   <button className="btn">Bid Property</button>
                 </div>
                 <div>
-                    <p>Property Details</p>
-                    <div className="mt-5 grid grid-cols-2 gap-1 md:gap-5">
-                        <div className=" bg-[#ECF5FF] rounded-md p-2">
-                            <h4 className="font-semibold">Total Area</h4>
-                            <p className="text-sm">{property.total_area}</p>
-                        </div>
-                        <div className=" bg-[#ECF5FF] rounded-md p-2">
-                            <h4 className="font-semibold">Status</h4>
-                            <p className="text-xs md:text-sm"> {property.status}</p>
-                        </div>
-                        <div></div>
+                  <p>Property Details</p>
+                  <div className="mt-5 grid grid-cols-2 gap-1 md:gap-5">
+                    <div className=" bg-[#ECF5FF] rounded-md p-2">
+                      <h4 className="font-semibold">Total Area</h4>
+                      <p className="text-sm">{property.total_area}</p>
                     </div>
+                    <div className=" bg-[#ECF5FF] rounded-md p-2">
+                      <h4 className="font-semibold">Status</h4>
+                      <p className="text-xs md:text-sm"> {property.status}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              
-            </div>
+            </Link>
           </div>
         ))}
       </div>

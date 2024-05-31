@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home";
 import Buyer from "../Pages/Buyer/Buyer";
 import SearchResult from "../Pages/BuyerSearchResult/SearchResult";
 import Seller from "../Pages/Seller/Seller";
+import PropertyDetails from "../Pages/BuyerSearchResult/PropertyDetails/PropertyDetails";
 
   export const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ import Seller from "../Pages/Seller/Seller";
         {
           path : 'searchResults',
           element : <SearchResult></SearchResult>
+        },
+        {
+          path : '/property/:id',
+          element : <PropertyDetails></PropertyDetails>
         },
         {
           path: 'seller',
