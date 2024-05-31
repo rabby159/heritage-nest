@@ -4,7 +4,7 @@ import logo from "../../../assets/heritageLogo.png";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-20">
       <footer className="footer p-10 lg:p-20 bg-[#ECF5FF] text-lg text-slate-600 lg:gap-14">
         <aside>
           <img className="w-16" src={logo} alt="heritage logo" />
