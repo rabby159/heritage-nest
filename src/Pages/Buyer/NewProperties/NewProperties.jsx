@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 const NewProperties = () => {
   return (
     <>
-    <div className="mt-20 mb-10 mx-5 md:mx-20 flex justify-between items-center">
+    <div className="mt-20 mb-14 mx-5 md:mx-20 flex justify-between items-center">
         <h2 className="font-semibold text-3xl">New Properties</h2>
         <a className="link text-blue-700 font-medium text-end">See all property</a>
     </div>

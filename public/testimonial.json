@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "rating" : 4,
+        "details": "This platform has revolutionized the way I find properties. The interface is user-friendly, and I found my dream home in no time!",
+        "img_url": "https://i.postimg.cc/g0Hqk6qv/review1.jpg",
+        "name": "Rahul Sharma",
+        "position": "Software Engineer,XYZ"
+    },
+    {
+        "id": 2,
+        "rating" : 3,
+        "details": "As a first-time home buyer, I was nervous about the process, but this site made everything so simple and straightforward.",
+        "img_url": "https://i.postimg.cc/T3qtNPNH/review2.jpg",
+        "name": "Ananya Singh",
+        "position": "Marketing Manager,XYZ"
+    },
+    {
+        "id": 3,
+        "rating" : 3,
+        "details": "The best real estate platform I've used! The customer service was excellent, and I found the perfect property for my family.",
+        "img_url": "https://i.postimg.cc/g0Hqk6qv/review1.jpg",
+        "name": "Vikram Patel",
+        "position": "Business Analyst,XYZ"
+    }
+]
