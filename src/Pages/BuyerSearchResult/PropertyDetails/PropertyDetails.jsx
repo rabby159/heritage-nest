@@ -7,6 +7,28 @@ import bathTab from "../../../assets/bathtub.jpg";
 import bed from "../../../assets/bed.jpg";
 import balcony from "../../../assets/balcony.jpg";
 import shelves from "../../../assets/shelves.jpg";
+import capa1 from "../../../assets/Capa_1.jpg"
+import capa2 from "../../../assets/Capa_2.jpg"
+import capa3 from "../../../assets/Capa_3.jpg"
+import capa4 from "../../../assets/Capa_4.jpg"
+import capa5 from "../../../assets/Capa_5.jpg"
+import capa6 from "../../../assets/Capa_6.jpg"
+import capa7 from "../../../assets/Capa_7.jpg"
+import capa8 from "../../../assets/Capa_8.jpg"
+import capa9 from "../../../assets/Capa_9.jpg"
+import capa10 from "../../../assets/Capa_10.jpg"
+import capa11 from "../../../assets/Capa_11.jpg"
+import capa12 from "../../../assets/Capa_12.jpg"
+import capa13 from "../../../assets/Capa_13.jpg"
+import capa14 from "../../../assets/Capa_14.jpg"
+import capa15 from "../../../assets/Capa_15.jpg"
+import capa16 from "../../../assets/Capa_16.jpg"
+import capa17 from "../../../assets/Capa_17.jpg"
+import capa18 from "../../../assets/Capa_18.jpg"
+import capa19 from "../../../assets/Capa_19.jpg"
+import capa20 from "../../../assets/Capa_20.jpg"
+import Services from "../../Shared/Services/Services";
+import PopularProperties from "../../Shared/PopularProperties/PopularProperties";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -192,7 +214,94 @@ const PropertyDetails = () => {
             </GoogleMapReact>
           </div>
         </div>
+        <div className="my-20 p-5 bg-[#ECF5FF] rounded-md">
+            <h3 className="text-2xl font-semibold mb-5">Amenities</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <div className="flex gap-2 items-center">
+                    <img src={capa1} alt="" />
+                    <p>Power Back Up</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa2} alt="" />
+                    <p>Lift</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa3} alt="" />
+                    <p>Club House</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa4} alt="" />
+                    <p>Gymnasium</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa5} alt="" />
+                    <p>Park</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa6} alt="" />
+                    <p>Reserved Parking</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa7} alt="" />
+                    <p>Security</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa8} alt="" />
+                    <p>Water Storage</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa9} alt="" />
+                    <p>Private Terrace/Garden</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa10} alt="" />
+                    <p>Vaastu Compliant</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa11} alt="" />
+                    <p>Service/Goods Lift</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa12} alt="" />
+                    <p>Visitor Parking</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa13} alt="" />
+                    <p>Intercom Facility</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa14} alt="" />
+                    <p>Maintenance Staff</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa15} alt="" />
+                    <p>Waste Disposal</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa16} alt="" />
+                    <p>Laundry Service</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa17} alt="" />
+                    <p>Internet/Wi-Fi Connectivity</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa18} alt="" />
+                    <p>DTH Television Facility</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa19} alt="" />
+                    <p>Piped Gas</p>
+                </div>
+                <div className="flex gap-2 items-center">
+                    <img src={capa20} alt="" />
+                    <p>Jogging and Strolling Track</p>
+                </div>
+            </div>
+        </div>
       </div>
+      <Services></Services>
+      <PopularProperties></PopularProperties>
     </div>
   );
 };
