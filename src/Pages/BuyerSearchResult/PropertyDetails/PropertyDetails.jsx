@@ -1,7 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
+import GoogleMapReact from "google-map-react";
 import { useLocation, useParams } from "react-router-dom";
+import bathTab from "../../../assets/bathtub.jpg";
+import bed from "../../../assets/bed.jpg";
+import balcony from "../../../assets/balcony.jpg";
+import shelves from "../../../assets/shelves.jpg";
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const PropertyDetails = () => {
   const { id } = useParams();
@@ -30,6 +37,14 @@ const PropertyDetails = () => {
   const price = Number(property.price);
   const maxPrice = price + price * 0.1;
   const minPrice = price - price * 0.1;
+
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627,
+    },
+    zoom: 11,
+  };
 
   return (
     <div>
@@ -111,7 +126,72 @@ const PropertyDetails = () => {
             </div>
           </div>
         </div>
-
+        <div className="grid lg:grid-cols-3 gap-10 mt-10">
+          <div className="md:col-span-2 bg-[#ECF5FF] p-5">
+            <h3 className="text-2xl font-semibold">Overview</h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:gap-5 my-7 bg-white p-3 rounded-md">
+              <div className="flex gap-3">
+                <img src={bed} alt="" />
+                <p>2 Bed</p>
+              </div>
+              <div className="flex gap-3">
+                <img src={bathTab} alt="" />
+                <p>2 Bath</p>
+              </div>
+              <div className="flex gap-3">
+                <img src={balcony} alt="" />
+                <p>2 Balcony</p>
+              </div>
+              <div className="flex gap-3">
+                <img src={shelves} alt="" />
+                <p>Fully Furnished</p>
+              </div>
+            </div>
+            <div>
+              <p>
+                Carpet Area :{" "}
+                <span className="font-semibold">{property.total_area}</span>
+              </p>
+              <p>
+                Floor :{" "}
+                <span className="font-semibold">Second (Out of 6th floor)</span>
+              </p>
+              <p>
+                Transaction Type :{" "}
+                <span className="font-semibold">{property.status}</span>
+              </p>
+              <p>
+                Facing : <span className="font-semibold">North - East</span>
+              </p>
+              <p>
+                Additional Rooms :{" "}
+                <span className="font-semibold">
+                  1 servant room & 1 gust room
+                </span>
+              </p>
+              <p>
+                Age of construction :{" "}
+                <span className="font-semibold">New Construction</span>
+              </p>
+              <p>
+                Lift : <span className="font-semibold">1</span>
+              </p>
+            </div>
+          </div>
+          <div style={{ height: "50vh", width: "100%" }}>
+            <GoogleMapReact
+              bootstrapURLKeys={{ key: "" }}
+              defaultCenter={defaultProps.center}
+              defaultZoom={defaultProps.zoom}
+            >
+              <AnyReactComponent
+                lat={23.7612256}
+                lng={90.42076599999996}
+                text="My Any"
+              />
+            </GoogleMapReact>
+          </div>
+        </div>
       </div>
     </div>
   );
