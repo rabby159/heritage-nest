@@ -10,7 +10,7 @@ const Navbar = () => {
         <Link to='/buyer'>Buy</Link>
       </li>
       <li>
-        <a>Sell</a>
+        <Link to='/seller'>Sell</Link>
       </li>
       <li>
         <a>Services</a>

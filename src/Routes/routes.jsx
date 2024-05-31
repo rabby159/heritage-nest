@@ -5,6 +5,7 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Buyer from "../Pages/Buyer/Buyer";
 import SearchResult from "../Pages/BuyerSearchResult/SearchResult";
+import Seller from "../Pages/Seller/Seller";
 
   export const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ import SearchResult from "../Pages/BuyerSearchResult/SearchResult";
         {
           path : 'searchResults',
           element : <SearchResult></SearchResult>
+        },
+        {
+          path: 'seller',
+          element : <Seller></Seller>
         }
       ]
     },
