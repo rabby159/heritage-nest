@@ -4,7 +4,7 @@ import { IoDownloadOutline } from "react-icons/io5";
 
 const BuyerList = () => {
     return (
-        <div className='mt-44 mx-5 md:mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+        <div className='mt-20 md:mt-44 mx-5 md:mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             <div className='bg-[#FDF0E7] p-5 rounded-md'>
                 <h2 className='text-4xl font-extrabold text-[#D95D0F]'>2k+</h2>
                 <p className='mb-10'>New Flat Listed</p>
