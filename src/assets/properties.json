@@ -1,0 +1,82 @@
+[
+    {
+        "property_name": "Shree Apartment",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Mumbai",
+        "price": 5000000,
+        "status": "Ready to Move",
+        "total_area": "1200 sqft"
+    },
+    {
+        "property_name": "Skyline Residency",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Delhi",
+        "price": 7500000,
+        "status": "Under Construction",
+        "total_area": "1500 sqft"
+    },
+    {
+        "property_name": "Garden View",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Kolkata",
+        "price": 4500000,
+        "status": "Ready to Move",
+        "total_area": "1000 sqft"
+    },
+    {
+        "property_name": "Ocean Breeze",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Goa",
+        "price": 6000000,
+        "status": "Ready to Move",
+        "total_area": "1300 sqft"
+    },
+    {
+        "property_name": "City Heights",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Bangalore",
+        "price": 9000000,
+        "status": "Under Construction",
+        "total_area": "1600 sqft"
+    },
+    {
+        "property_name": "Riverfront Apartments",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Ahmedabad",
+        "price": 5500000,
+        "status": "Ready to Move",
+        "total_area": "1100 sqft"
+    },
+    {
+        "property_name": "Palm Grove",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Chennai",
+        "price": 7000000,
+        "status": "Ready to Move",
+        "total_area": "1400 sqft"
+    },
+    {
+        "property_name": "Hilltop Residency",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Pune",
+        "price": 8000000,
+        "status": "Under Construction",
+        "total_area": "1500 sqft"
+    },
+    {
+        "property_name": "Lakeview Apartments",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Hyderabad",
+        "price": 6500000,
+        "status": "Ready to Move",
+        "total_area": "1200 sqft"
+    },
+    {
+        "property_name": "Sunshine Residency",
+        "img_url": "https://i.postimg.cc/qMV94jhS/search-Img.png",
+        "location": "Jaipur",
+        "price": 5000000,
+        "status": "Ready to Move",
+        "total_area": "1300 sqft"
+    }
+]

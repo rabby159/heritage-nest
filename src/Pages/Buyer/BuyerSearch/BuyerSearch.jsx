@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiFindReplaceLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
+import propertyData from '../../../assets/properties.json'
 
 const BuyerSearch = () => {
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [location, setLocation] = useState("");
+  const [propertyType, setPropertyType] = useState("");
+  const [budget, setBudget] = useState("");
+  const navigate = useNavigate();
+
+
+  const handleSearch = () =>{
+    const filterProperty = propertyData.filter(property => {
+      return (
+        property.property_name.toLowerCase().includes(searchQuery.toLowerCase()) && property.location.toLowerCase().includes(location.toLowerCase()) && (!propertyType || property.status.toLowerCase() === propertyType.toLowerCase()) && (!budget || property.price <= budget)
+      )
+    });
+
+    navigate("/searchResults", {state : {searchResults: filterProperty}})
+  }
+
+
+
   return (
     <div className="lg:w-[920px] lg:p-5 lg:ml-12 xl:ml-60 bg-[#f8f9f9] lg:-mt-52 lg:absolute">
       <div>
@@ -14,11 +36,11 @@ const BuyerSearch = () => {
             role="tab"
             className="tab"
             aria-label="Buy"
-            checked
+            defaultChecked
           />
           <div role="tabpanel" className="tab-content p-5 md:p-10">
             <label className="input input-bordered flex items-center gap-2">
-              <input type="text" className="grow" placeholder="Search" />
+              <input type="text" className="grow" placeholder="Search Properties" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -59,13 +81,21 @@ const BuyerSearch = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  <h3 className="text-lg font-bold">Your Location</h3>
+                  <input
+                    type="text"
+                    className="text-lg font-bold w-full border-none outline-none bg-transparent text-"
+                    placeholder="Your Location"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                  />
                 </div>
                 <select className="select select-bordered w-full max-w-xs">
                   <option disabled selected></option>
-                  <option>Delhi</option>
-                  <option>Mumbai</option>
-                  <option>Kolkata</option>
+                  <option value='Delhi'>Delhi</option>
+                  <option value='Mumbai'>Mumbai</option>
+                  <option value='Kolkata'>Kolkata</option>
+                  <option value='Goa'>Goa</option>
+                  <option value='Bangalore'>Bangalore</option>
                 </select>
               </div>
               {/* property filed  */}
@@ -92,11 +122,10 @@ const BuyerSearch = () => {
                   </svg>
                   <h3 className="text-lg font-bold">Property Type</h3>
                 </div>
-                <select className="select select-bordered w-full max-w-xs">
-                  <option disabled selected></option>
-                  <option>Relesed</option>
-                  <option>Mumbai</option>
-                  <option>Kolkata</option>
+                <select className="select select-bordered w-full max-w-xs" value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
+                  <option value=''>All</option>
+                  <option value='Ready to Move'>Ready to Move</option>
+                  <option value='Under Construction'>Under Construction</option>
                 </select>
               </div>
               {/* budget filed  */}
@@ -118,12 +147,7 @@ const BuyerSearch = () => {
                   </svg>
                   <h3 className="text-lg font-bold">Budget</h3>
                 </div>
-                <select className="select select-bordered w-full max-w-xs">
-                  <option disabled selected></option>
-                  <option>$50</option>
-                  <option>$100</option>
-                  <option>#500</option>
-                </select>
+                <input type="number" placeholder="Enter budget" className="input input-bordered w-full max-w-xs" value={budget} onChange={(e) => setBudget(e.target.value)} />
               </div>
             </div>
           </div>
@@ -232,7 +256,7 @@ const BuyerSearch = () => {
             </label>
           </div>
         </div>
-          <button className="bg-[#0059B1] p-3 text-white rounded-sm inline-flex items-center justify-center gap-2 -mt-4 w-full"><RiFindReplaceLine /> Find Property</button>
+          <button className="bg-[#0059B1] p-3 text-white rounded-sm inline-flex items-center justify-center gap-2 -mt-4 w-full" onClick={handleSearch}><RiFindReplaceLine /> Find Property</button>
         
       </div>
     </div>
