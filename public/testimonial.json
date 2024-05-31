@@ -2,7 +2,7 @@
     {
         "id": 1,
         "rating" : 4,
-        "details": "This platform has revolutionized the way I find properties. The interface is user-friendly, and I found my dream home in no time!",
+        "details": "This platform has revolutionized the way I find properties. The interface is user-friendly, and I found my dream home in no!",
         "img_url": "https://i.postimg.cc/g0Hqk6qv/review1.jpg",
         "name": "Rahul Sharma",
         "position": "Software Engineer,XYZ"
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "rating" : 3,
+        "rating" : 3.5,
         "details": "The best real estate platform I've used! The customer service was excellent, and I found the perfect property for my family.",
         "img_url": "https://i.postimg.cc/g0Hqk6qv/review1.jpg",
         "name": "Vikram Patel",

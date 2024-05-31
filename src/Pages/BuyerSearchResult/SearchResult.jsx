@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Testimonials from "../Shared/Testimonials/Testimonials";
+import HomeLoan from "./HomeLoan/HomeLoan";
 
 const SearchResult = () => {
   const location = useLocation();
@@ -54,14 +56,14 @@ const SearchResult = () => {
                 </div>
                 <div>
                     <p>Property Details</p>
-                    <div className="mt-5 grid grid-cols-2 gap-5">
+                    <div className="mt-5 grid grid-cols-2 gap-1 md:gap-5">
                         <div className=" bg-[#ECF5FF] rounded-md p-2">
                             <h4 className="font-semibold">Total Area</h4>
                             <p className="text-sm">{property.total_area}</p>
                         </div>
                         <div className=" bg-[#ECF5FF] rounded-md p-2">
                             <h4 className="font-semibold">Status</h4>
-                            <p className="text-sm"> {property.status}</p>
+                            <p className="text-xs md:text-sm"> {property.status}</p>
                         </div>
                         <div></div>
                     </div>
@@ -72,6 +74,8 @@ const SearchResult = () => {
           </div>
         ))}
       </div>
+      <HomeLoan></HomeLoan>
+      <Testimonials></Testimonials>
     </div>
   );
 };
