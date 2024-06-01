@@ -11,6 +11,7 @@ import PropertyDetails from "../Pages/BuyerSearchResult/PropertyDetails/Property
 import SignIn from "../Pages/SignIn/SignIn";
 import PrivateRoute from "./PrivateRoute";
 import ManageRoute from "../Pages/ManageRoute/ManageRoute";
+import ServicesRoute from "../Pages/ServicesRoute/ServicesRoute";
 
   export const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ import ManageRoute from "../Pages/ManageRoute/ManageRoute";
         {
           path: 'manageRoute',
           element: <PrivateRoute><ManageRoute></ManageRoute></PrivateRoute>
+        },
+        {
+          path: 'services',
+          element: <ServicesRoute></ServicesRoute>
         }
       ]
     },
