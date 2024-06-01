@@ -1,25 +1,52 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { useLocation, useNavigate } from "react-router-dom";
+import SocialSignIn from "./SocialSignIn/SocialSignIn";
 
 const SignIn = () => {
+  const { createUser, signInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-    const handleSignIn = e => {
-        e.preventDefault();
-        const form = e.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        
-    };
+  const from = location.state?.from?.pathname || "/";
 
-    const handleRegister = e => {
-        e.preventDefault();
-        const form = e.target;
-        const email = form.email.value;
-        const phone = form.number.value;
-        const password = form.password.value;
-        
-    };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
+  const onSubmit = (data) => {
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      Swal.fire({
+        title: "Congratulation",
+        text: "Your account is ready to use. You will be redirected to the Home page in a few seconds..",
+        icon: "success",
+      });
+      navigate(from, { replace: true });
+    });
+  };
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signInUser(email, password).then((result) => {
+      const user = result.user;
+      Swal.fire({
+        title: "Congratulation",
+        text: "Welcome Back",
+        icon: "success",
+      });
+      navigate(from, { replace: true });
+    });
+  };
 
   return (
     <div className="flex justify-center mt-10">
@@ -77,6 +104,8 @@ const SignIn = () => {
                   </div>
                 </div>
               </div>
+            <p>-Or-</p>
+            <SocialSignIn></SocialSignIn>
             </div>
             {/* register  */}
             <input
@@ -90,33 +119,54 @@ const SignIn = () => {
               <div className="hero">
                 <div className="hero-content flex-col">
                   <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={handleRegister} className="card-body">
+                    <form
+                      onSubmit={handleSubmit(onSubmit)}
+                      className="card-body"
+                    >
                       <div className="form-control">
                         <input
                           type="email"
+                          {...register("email", { required: true })}
                           name="email"
                           placeholder="email"
                           className="input input-bordered"
-                          required
                         />
+                        {errors.email && (
+                          <span className="text-xs text-red-600">
+                            Your Email is required
+                          </span>
+                        )}
                       </div>
                       <div className="form-control">
                         <input
                           type="number"
+                          {...register("number", { required: true })}
                           name="number"
                           placeholder="Phone"
                           className="input input-bordered"
-                          required
                         />
+                        {errors.number && (
+                          <span className="text-xs text-red-600">
+                            Your Phone is required
+                          </span>
+                        )}
                       </div>
                       <div className="form-control">
                         <input
                           type="password"
+                          {...register("password", {
+                            required: true,
+                            minLength: 8,
+                          })}
                           name="password"
                           placeholder="password"
                           className="input input-bordered"
-                          required
                         />
+                        {errors.password && (
+                          <span className="text-xs text-red-600">
+                            Your Password is required
+                          </span>
+                        )}
                         <p className="text-left text-xs mt-2">
                           *Password at least 8 character or longer{" "}
                         </p>
@@ -138,6 +188,8 @@ const SignIn = () => {
                   </div>
                 </div>
               </div>
+              <p>-Or-</p>
+            <SocialSignIn></SocialSignIn>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import {
     createBrowserRouter
   } from "react-router-dom";
@@ -8,6 +9,8 @@ import SearchResult from "../Pages/BuyerSearchResult/SearchResult";
 import Seller from "../Pages/Seller/Seller";
 import PropertyDetails from "../Pages/BuyerSearchResult/PropertyDetails/PropertyDetails";
 import SignIn from "../Pages/SignIn/SignIn";
+import PrivateRoute from "./PrivateRoute";
+import ManageRoute from "../Pages/ManageRoute/ManageRoute";
 
   export const router = createBrowserRouter([
     {
@@ -32,11 +35,15 @@ import SignIn from "../Pages/SignIn/SignIn";
         },
         {
           path: 'seller',
-          element : <Seller></Seller>
+          element : <PrivateRoute><Seller></Seller></PrivateRoute>
         },
         {
           path: 'signIn',
           element : <SignIn></SignIn>
+        },
+        {
+          path: 'manageRoute',
+          element: <PrivateRoute><ManageRoute></ManageRoute></PrivateRoute>
         }
       ]
     },

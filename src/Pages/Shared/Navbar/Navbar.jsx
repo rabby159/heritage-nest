@@ -1,9 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../../assets/heritageLogo.png";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+    .then(() => {})
+    .catch(error => console.log(error))
+  }
+
+
   const navLink1 = (
     <>
       <li>
@@ -21,11 +30,17 @@ const Navbar = () => {
   const navLink2 = (
     <>
       <li>
-        <a>Manage Rentals</a>
+        <Link to='/manageRoute'>Manage Rentals</Link>
       </li>
-      <li>
+      {
+        user ? <>
+        <li>
+        <Link onClick={handleLogOut}>Sign Out</Link>
+      </li>
+         </> : <><li>
         <Link to='/signIn'>Sign In</Link>
-      </li>
+      </li></>
+      }
     </>
   );
 
